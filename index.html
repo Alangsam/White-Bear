@@ -7,50 +7,80 @@
         <title> White Bear </title>
     </head>
     <body style="background-image: url('/style/background-landing.jpg'); background-size: 100% 100%; background-repeat: no-repeat; background-attachment: fixed;">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12 pt-4">
-                    <img  class="d-inline-block my-auto" src="style/logo-landing.png"/>
-                    <h1 class="d-inline-block pl-3 text-white">
+                <div class="offset-1 d-inline-flex pt-5 ">
+                    <img  class="" src="style/logo-landing.png"/>
+                    <h1 class=" pl-3 text-white">
                         White Bear
                     </h1>
                 </div>
             </div>    
-            <div class="row">
-                <div class="col-5 ">
-                    <div class="card mx-auto mt-9 ">
+            <div class="row ">
+                <div class="col-3  ml-auto">
+                    <div id="create" class="card mx-auto mt-9">
                         <div class="card-body">
-                            <h3 class="card-title">
+                            <h2 class="card-title">
                                 Nice to meet you
-                            </h3>
-                            <h6 class="card-text">
+                            </h2>
+                            <p class="card-text">
                                 Sign up for White Bear. Free forever.
-                            </h6>
-                            <button class="btn btn-primary">
+                            </p>
+                            <button class="btn btn-primary btn-block">
                                 signup
                             </button>
-                        </div> 
+                        </div>
+                        
                     </div>
-                </div>    
-                <div class="col-5 offset-2">    
-                    <div class="card mt-9">
+                    <div id="creatingacc" class="card mx-auto mt-9" hidden>
                         <div class="card-body">
-                            <h3 class="card-title">
-                                Welcome back
-                            </h3>
-                            <h6 class="card-text">
-                                Log in with your email address and password.
-                            </h6>
+                            <h2 class="card-title">
+                                Nice to meet you
+                            </h2>
+                            <p class="card-text">
+                                Sign up for White Bear. Free forever.
+                            </p>
+                            <p>
+                                Let's get you signed up
+                            </p>
                             <form>
                                 <div class="form-group">
                                     <label for="Email_textbox">Email address</label>
-                                    <input id="Email_textbox" class="form-control" type="email" name="login_info"></input>
+                                    <input id="Email_textbox" class="form-control border border-dark" type="email" name="login_info"></input>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email_password">Create a password</label>
+                                    <input id="Email_password" class="form-control border border-dark" type="password" name="login_info"></input>
+                                </div>
+                            </form>
+                            <button class="btn btn-primary btn-block">
+                                Let's go!
+                            </button>
+                        </div>
+                    </div> 
+                </div>    
+                <div class="col-3 ml-8 mr-auto">    
+                    <div class="card mt-9">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                Welcome back
+                            </h2>
+                            <p class="card-text">
+                                Log in with your email address and password.
+                            </p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="Email_textbox">Email address</label>
+                                    <input id="Email_textbox" class="form-control border border-dark" type="email" name="login_info"></input>
                                 </div>
                                 <div class="form-group">
                                     <label for="Email_password">Password</label>
-                                    <input id="Email_password" class="form-control" type="password" name="login_info"></input>
+                                    <input id="Email_password" class="form-control border border-dark" type="password" name="login_info"></input>
                                 </div>
                             </form>
+                            <button class="btn btn-primary float-right">
+                                Log in
+                            </button>
                         </div>  
                     </div>
 
