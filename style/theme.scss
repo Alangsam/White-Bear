@@ -72,6 +72,18 @@ $h2-font-size:                27px;
 $h3-font-size:                20px;
 $h4-font-size:                20px;
 
+$font-weight-bold: 700px;
+$font-weight-normal: 400px;
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: "Noto Serif", serif; 
+$font-family-brand: "Fira Sans";
+$font-family-base:            $font-family-sans-serif;
+// stylelint-enable value-keyword-case
+
+
 $theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
