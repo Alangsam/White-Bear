@@ -11,18 +11,16 @@ $(document).ready(function() {
 
     });
    
-    $('#addanswertext').click(function() {
-        $('#textcountleft').toggle();
+    //$('#addanswertext').click(function() {
+        //$('#textcountleft').toggle();
 
-        if ('#textcountright').val() hidden()= false 
+        //if(('#textcountright').is(" : hidden")){
+            //none;
+        //} else{
+            //$('#textcountright').toggle()
+        //}
 
-        $('#textcountright').toggle()
-
-        else:
-
-            do nothing
-
-    });
+    //});
 });
 
 $(document).ready(function() {
@@ -34,19 +32,19 @@ $(document).ready(function() {
 
     });
 
-    $('#editimage').click(function() {
-        $('#textcountright').toggle()
+    //$('#editimage').click(function() {
+        //$('#textcountright').toggle()
 
-        if ('#textcountleft').val() hidden()= false 
+        //if ('#textcountleft').val() hidden()= false 
 
-        $('#textcountleft').toggle()
+        //$('#textcountleft').toggle()
 
-        else:
+        //else:
 
-            do nothing
+            //do nothing
 
 
-    });
+    //});
 });
 
 
