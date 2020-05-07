@@ -15,53 +15,60 @@
         </script>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-12 "> 
-                    <img class="d-inline-block" src="style/logo-app.svg" width="32px;" />
-                    <h3 class="d-inline-block"> 
-                        White Bear
-                    </h3>
-                    <button class="btn btn-link float-right">
-                        Log out
-                    </button>
-                </div>
-                <div class="col-12 btn-group px-0" role="group" aria-label="navigation">
-                    <button class="btn btn-primary border border-dark rounded-0">
-                        Create New
-                    </button>
-                    <button class="btn btn-primary border border-dark rounded-0">
-                        Review
-                    </button>
-                    <button class="btn btn-primary border border-dark rounded-0">
-                        All Cards
-                    </button>
-                </div>
-                <div class="mx-auto">
-                    <div class="card" >
-                        <form class="text-center ">
-                            <label class="mb-0 mt-2 d-block" for="addanswertext"><h4 class="">Add an answer</h4></label>
-                            <textarea id="addanswertext" maxlength="240" class="bg-primary border-bottom-0 rounded-top" rows="9" style="width: 330px;"></textarea>
-                        </form>
-                        <textarea class="bg-secondary border-top-0 rounded-bottom mt-n2 pt-2" rows="5" style="width: 330px;">
-
-                        </textarea>
+        <div class="bg-danger py-4 container-fluid text-white" style="z-index: 1; position: absolute;" hidden>
+            <img src="style/error.svg" width="32px"/><span>Oops! Our bad. Please try again.</span>Oops! Our bad. Please try again.
+        </div>
+        <div class="bg-success py-4 container-fluid text-white text-center " style="z-index: 1; position: absolute;" hidden>
+            <img src="style/success.svg" width="32"/><span class="pl-3 align-middle">Card Created!</span>
+        </div>
+        <div style="z-index: -1; position: absolute;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 "> 
+                        <img class="d-inline-block" src="style/logo-app.svg" width="32px;" />
+                        <h3 class="d-inline-block"> 
+                            White Bear
+                        </h3>
+                        <button class="btn btn-link float-right">
+                            Log out
+                        </button>
+                    </div>
+                    <div class="col-12 btn-group px-0" role="group" aria-label="navigation">
+                        <button class="btn btn-primary border border-dark rounded-0">
+                            Create New
+                        </button>
+                        <button class="btn btn-primary border border-dark rounded-0">
+                            Review
+                        </button>
+                        <button class="btn btn-primary border border-dark rounded-0">
+                            All Cards
+                        </button>
+                    </div>
+                    <div class="mx-auto">
+                        <div class="card" >
+                            <form class="text-center ">
+                                <label class="mb-0 mt-2 d-block" for="addanswertext"><h4 class="">Add an answer</h4></label>
+                                <textarea id="addanswertext" maxlength="240" class="bg-primary border-bottom-0 rounded-top" rows="9" style="width: 330px;"></textarea>
+                            </form>
+                            <textarea class="bg-secondary border-top-0 rounded-bottom mt-n2 pt-2" rows="5" style="width: 330px;">
+    
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="col-11">
+                        <p class="float-right">/240</p><p id="textcountleft" class="float-right"></p>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-link">Back to answer</button>
+                        <button class="float-right btn  btn-secondary ">
+                            <div class="">
+                                <img src="style/save.svg" class="" style="width: 22px" />
+                                Save
+                            </div> 
+                        </button>
                     </div>
                 </div>
-                <div class="col-11">
-                    <p class="float-right">/240</p><p id="textcountleft" class="float-right"></p>
-                </div>
-                <div class="col-12">
-                    <button class="btn btn-link">Back to answer</button>
-                    <button class="float-right btn  btn-secondary ">
-                        <div class="">
-                            <img src="style/save.svg" class="" style="width: 22px" />
-                            Save
-                        </div> 
-                    </button>
-                </div>
             </div>
-        </div>
+        </div>  
     </body>
 </html>
