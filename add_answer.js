@@ -1,8 +1,13 @@
+// used http://geoffmuskett.com/really-simple-jquery-character-countdown-in-textarea/ 
+//to not just show me how, 
+//but only site with simple explanations of how it is working
+
 $(document).ready(function() {
-    var max_length = 240;
+    var maxLength = 240;
     $('#addanswertext').keyup(function () {
-      var textlen = maxLength - $(this).val().length;
-      $('#textcountleft').html(textlen);
+        var length = $(this).val().length;
+        var length = maxLength-length;
+        $('#textcountleft').html(length);
 
     });
 });    
