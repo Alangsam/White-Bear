@@ -15,10 +15,10 @@
         </script>
     </head>
     <body>
-        <div class="bg-danger py-4 container-fluid text-white fixed-top"  hidden>
+        <div class="bg-danger py-4 container-fluid text-white" style="z-index: 1; position: absolute;" hidden>
             <img src="style/error.svg" width="32px"/><span>Oops! Our bad. Please try again.</span>Oops! Our bad. Please try again.
         </div>
-        <div class="bg-success py-4 container-fluid text-white text-center fixed-top" hidden>
+        <div class="bg-success py-4 container-fluid text-white text-center " style="z-index: 1; position: absolute;" hidden>
             <img src="style/success.svg" width="32"/><span class="pl-3 align-middle">Card Created!</span>
         </div>
         <div style="z-index: -1; position: absolute;">
@@ -47,18 +47,19 @@
                     <div class="mx-auto">
                         <div class="card" >
                             <form class="text-center ">
-                                <label class="mb-0 mt-2 d-block" for="addanswertext"><h4 class="">Add an answer</h4></label>
+                                <label class="mb-0 mt-2 d-block" for="addanswertext"><h4 class="">Edit card</h4></label>
                                 <textarea id="addanswertext" maxlength="240" class="bg-primary border-bottom-0 rounded-top" rows="9" style="width: 330px;"></textarea>
                             </form>
-                            <textarea id="" class="bg-secondary border-top-0 rounded-bottom mt-n2 pt-2" rows="5" style="width: 330px;">
-    
-                            </textarea>
+                            <form>
+                                <textarea id="editimage"  maxlength="240" class="bg-secondary border-top-0 rounded-bottom mt-n2 pt-2" rows="5" style="width: 330px;"></textarea>
+                            </form>
+                            
                         </div>
                     </div>
                     <div class="col-11">
                         <p class="float-right">/240</p>
                         <p id="textcountleft" class="float-right"></p>
-                        
+                        <p id="textcountright" class="float-right"></p>
                     </div>
                     
                     <div class="col-12">
