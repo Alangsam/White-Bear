@@ -33,3 +33,5 @@ $(document).ready(function() {
     });
 });
 
+//for delete button
+
