@@ -10,17 +10,6 @@ $(document).ready(function() {
         $('#textcountleft').html(length);
 
     });
-   
-    //$('#addanswertext').click(function() {
-        //$('#textcountleft').toggle();
-
-        //if(('#textcountright').is(" : hidden")){
-            //none;
-        //} else{
-            //$('#textcountright').toggle()
-        //}
-
-    //});
 });
 
 $(document).ready(function() {
@@ -31,20 +20,6 @@ $(document).ready(function() {
         $('#textcountright').html(length);
 
     });
-
-    //$('#editimage').click(function() {
-        //$('#textcountright').toggle()
-
-        //if ('#textcountleft').val() hidden()= false 
-
-        //$('#textcountleft').toggle()
-
-        //else:
-
-            //do nothing
-
-
-    //});
 });
 
 
