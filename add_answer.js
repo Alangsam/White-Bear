@@ -17,6 +17,6 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#signup').click(function() {
         $('#create').toggle();
-        $('#creatingacc').toggle();
+        $('#creating-acc').toggle();
     });
 });
