@@ -10,4 +10,13 @@ $(document).ready(function() {
         $('#textcountleft').html(length);
 
     });
-});    
+});
+
+//On landing page, switches to create acc if you hit signup
+
+$(document).ready(function() {
+    $('#signup').click(function() {
+        $('#create').toggle();
+        $('#creatingacc').toggle();
+    });
+});
