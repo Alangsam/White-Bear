@@ -11350,4 +11350,9 @@ h3 {
   display: none;
 }
 
+#sort, #searchbox {
+  width: 200px;
+  height: 32px;
+}
+
 /*# sourceMappingURL=dist.css.map */
