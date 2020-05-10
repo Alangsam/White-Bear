@@ -116,3 +116,7 @@ $emphasized-link-hover-darken-percentage: 15%;
 
 
 
+$component-active-color: $white;
+$component-active-bg: theme-color("primary");
+$custom-control-indicator-checked-color: $component-active-color;
+$custom-control-indicator-checked-bg: $component-active-bg;
