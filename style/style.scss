@@ -30,8 +30,9 @@
 
 textarea {
     resize: none;
-    color: white;
+    color: $white;
     outline: none;
+    font-size : $font-size-base * 1.25;
 }
 
 .text-brand {
@@ -40,4 +41,26 @@ textarea {
 
 .tab-seperator {
     border-left: 1px $gray-800 solid;
+}
+
+.card-body {
+    font-family: $font-family-serif;
+
+}
+.card.bg-primary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card.bg-secondary {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.card {
+    border: 0;
+}
+
+textarea {
+    background-color: transparent;
+    border: 0;
 }
