@@ -74,6 +74,7 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg;
 $input-padding-x-lg:                    $input-btn-padding-x-lg;
 $input-border-width:                    $input-btn-border-width;
 
+
 $font-size-base:              1rem ; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 ;
 $font-size-sm:                $font-size-base * .875 ;
@@ -133,3 +134,12 @@ $custom-control-indicator-checked-bg: $component-active-bg;
 $card-spacer-y:                     map-get($map: $spacers, $key: 4);
 $card-spacer-x:                     map-get($map: $spacers, $key: 4);
 $card-border-width:                 $border-width;
+
+
+
+$border-width:                2px ;
+$border-color:                $primary ;
+
+$border-radius:               map-get($map: $spacers, $key: 1) ;
+$border-radius-lg:            $border-radius;
+$border-radius-sm:            $border-radius;
