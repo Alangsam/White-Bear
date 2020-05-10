@@ -11393,4 +11393,8 @@ textarea {
   border: 0;
 }
 
+#the-bottom-card {
+  display: none;
+}
+
 /*# sourceMappingURL=dist.css.map */

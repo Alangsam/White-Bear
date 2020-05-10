@@ -35,3 +35,8 @@ $(document).ready(function() {
 
 //for delete button
 
+$(document).ready(function() {
+    $('#show-the-answer').click(function() {
+        $('#the-bottom-card').toggle();
+    });
+});

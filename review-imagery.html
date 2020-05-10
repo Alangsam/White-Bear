@@ -38,21 +38,29 @@
                         All Cards
                     </button>
                 </div>
-                <div class="mx-auto">
-                    <div class="card col-12" >
-                        <form class="text-center pt-4">
-                            
-                            <textarea id="review-text" class="bg-primary border rounded-top" rows="9" style="width: 330px;"></textarea>
+                <div class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1 mx-auto pt-4">
+                    <div class="card bg-primary" >
+                        <form class="card-body text-center">
+                            <textarea id="addanswertext" maxlength="240" class="" rows="9"></textarea>
                         </form>
-                        
+                    </div>
+                    <div id="the-bottom-card" class="card bg-secondary">
+                        <div class="card-body">
+                            <form>
+                                <textarea id="editimage"  maxlength="240" class="" rows="5"></textarea>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 pt-4">
-                    <button class="btn btn-link">previous card</button>
+                <div class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-6">
+                    <div class="col-6 d-inline pt-4">
+                        <button class="btn btn-link">previous card</button>
+                    </div>
+                    <div class="col-6 d-inline pt-4">
+                        <button id="show-the-answer" class="float-right btn btn-outline-primary ">Show answer</button>
+                    </div>
                 </div>
-                <div class="col-6 pt-4">
-                    <button class="float-right btn btn-outline-primary ">Show answer</button>
-                </div>
+                
             </div>
         </div>
     </body>
