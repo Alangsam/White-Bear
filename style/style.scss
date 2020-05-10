@@ -27,3 +27,13 @@
     width: 200px;
     height: 32px;
 }
+
+textarea {
+    resize: none;
+    color: white;
+    outline: none;
+}
+
+.text-brand {
+    font-family: $font-family-brand;
+}

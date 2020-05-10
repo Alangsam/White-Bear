@@ -11355,4 +11355,14 @@ h3 {
   height: 32px;
 }
 
+textarea {
+  resize: none;
+  color: white;
+  outline: none;
+}
+
+.text-brand {
+  font-family: "Fira Sans";
+}
+
 /*# sourceMappingURL=dist.css.map */
