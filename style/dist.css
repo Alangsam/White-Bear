@@ -11335,7 +11335,7 @@ h3 {
 .btn-link {
   padding-left: 0;
   padding-right: 0;
-  font-weight: 700px;
+  font-weight: 700px !important;
   border: 0;
 }
 
