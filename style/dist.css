@@ -11365,4 +11365,8 @@ textarea {
   font-family: "Fira Sans";
 }
 
+.tab-seperator {
+  border-left: 1px #292a30 solid;
+}
+
 /*# sourceMappingURL=dist.css.map */
