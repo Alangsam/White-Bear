@@ -37,6 +37,6 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $('#show-the-answer').click(function() {
-        $('#the-bottom-card').toggle();
+        $('#the-top-card').toggle();
     });
 });
