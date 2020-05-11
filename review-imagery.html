@@ -17,8 +17,7 @@
     <body>
         <div class="container">
             <div class="row">
-                
-                <div class="col-12 "> 
+                <div class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"> 
                     <img class="d-inline-block" src="style/logo-app.svg" width="32px;" />
                     <h3 class="d-inline-block text-brand"> 
                         White Bear
@@ -26,41 +25,40 @@
                     <button class="btn btn-link float-right">
                         Log out
                     </button>
-                </div>
-                <div class="col-12 btn-group px-0" role="group" aria-label="navigation">
-                    <button class="btn btn-primary">
-                        Create New
-                    </button>
-                    <button class="btn btn-primary tab-seperator">
-                        Review
-                    </button>
-                    <button class="btn btn-primary tab-seperator">
-                        All Cards
-                    </button>
-                </div>
-                <div class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1 mx-auto pt-4">
-                    <div class="card bg-primary" >
-                        <form class="card-body text-center">
-                            <textarea id="addanswertext" maxlength="240" class="" rows="9"></textarea>
-                        </form>
-                    </div>
-                    <div id="the-bottom-card" class="card bg-secondary">
-                        <div class="card-body">
-                            <form>
-                                <textarea id="editimage"  maxlength="240" class="" rows="5"></textarea>
+                    <div class="d-flex btn-group px-0" role="group" aria-label="navigation">
+                        <button class="btn btn-primary">
+                            Create New
+                        </button>
+                        <button class="btn btn-primary tab-seperator">
+                            Review
+                        </button>
+                        <button class="btn btn-primary tab-seperator">
+                            All Cards
+                        </button>
+                    </div>  
+                    <div class=" mx-auto pt-4">
+                        <div class="card bg-primary" >
+                            <form class="card-body text-center">
+                                <textarea id="addanswertext" maxlength="240" class="" rows="9"></textarea>
                             </form>
+                        </div>
+                        <div id="the-bottom-card" class="card bg-secondary">
+                            <div class="card-body">
+                                <form>
+                                    <textarea id="editimage"  maxlength="240" class="" rows="5"></textarea>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="col-6 d-inline pt-4 pl-0">
+                            <button class="btn btn-link">previous card</button>
+                        </div>
+                        <div class="col-6 d-inline pt-4">
+                            <button id="show-the-answer" class="float-right btn btn-outline-primary ">Show answer</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-6">
-                    <div class="col-6 d-inline pt-4">
-                        <button class="btn btn-link">previous card</button>
-                    </div>
-                    <div class="col-6 d-inline pt-4">
-                        <button id="show-the-answer" class="float-right btn btn-outline-primary ">Show answer</button>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </body>

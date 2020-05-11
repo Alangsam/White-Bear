@@ -2046,14 +2046,14 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: calc(0.5rem + 2px);
   padding-bottom: calc(0.5rem + 2px);
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 2px);
   padding-bottom: calc(0.25rem + 2px);
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -2077,7 +2077,7 @@ select.form-control:focus::-ms-value {
 .form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -2085,7 +2085,7 @@ select.form-control:focus::-ms-value {
 .form-control-lg {
   height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 2rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -2131,7 +2131,7 @@ textarea.form-control {
   margin-left: -1.25rem;
 }
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
-  color: #6c757d;
+  color: #80818d;
 }
 
 .form-check-label {
@@ -2889,14 +2889,14 @@ fieldset:disabled a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 2rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -3405,7 +3405,7 @@ input[type=button].btn-block {
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
   padding: 0.5rem 2rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -3422,7 +3422,7 @@ input[type=button].btn-block {
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
   padding: 0.25rem 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -11198,7 +11198,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #80818d !important;
 }
 
 .text-black-50 {
@@ -11335,7 +11335,6 @@ h3 {
 .btn-link {
   padding-left: 0;
   padding-right: 0;
-  font-weight: 700px !important;
   border: 0;
 }
 
@@ -11395,6 +11394,10 @@ textarea {
 
 #the-bottom-card {
   display: none;
+}
+
+.tab-active {
+  background-color: #3d3e47;
 }
 
 /*# sourceMappingURL=dist.css.map */

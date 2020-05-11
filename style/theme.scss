@@ -50,6 +50,11 @@ $spacers: map-merge(
   $spacers
 );
 
+$font-size-base:              1rem ; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 ;
+$font-size-sm:                $font-size-base * .875 ;
+
+
 $input-btn-padding-y:         map-get($map: $spacers, $key: 2);
 $input-btn-padding-x:         map-get($map: $spacers, $key: 4);
 $input-btn-padding-y-sm:      map-get($map: $spacers, $key: 1);
@@ -75,10 +80,30 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg;
 $input-padding-x-lg:                    $input-btn-padding-x-lg;
 $input-border-width:                    $input-btn-border-width;
 
+$input-btn-font-size-sm:      $font-size-base;
+$input-btn-line-height-sm:    $line-height-base;
+$input-btn-font-size:         $font-size-base;
+$input-btn-line-height:       $line-height-base;
+$input-btn-font-size-lg:      $font-size-base;
+$input-btn-line-height-lg:    $line-height-base;
 
-$font-size-base:              1rem ; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-base * 1.25 ;
-$font-size-sm:                $font-size-base * .875 ;
+$btn-font-size-sm:            $font-size-base;
+$btn-line-height-sm:          $line-height-base;
+$btn-font-size:               $font-size-base;
+$btn-line-height:             $line-height-base;
+$btn-font-size-lg:            $font-size-base;
+$btn-line-height-lg:          $line-height-base;
+
+$input-font-size-sm:                    $font-size-base;
+$input-line-height-sm:                  $line-height-base;
+$input-font-size:                       $font-size-base;
+$input-line-height:                     $line-height-base;
+$input-font-size-lg:                    $font-size-base;
+$input-line-height-lg:                  $line-height-base;
+
+
+
+
 
 $h1-font-size:                $font-size-base * 3.75;
 $h2-font-size:                $font-size-base * 1.6875;
@@ -116,6 +141,8 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
+
+$text-muted: $gray-400;
 
 $link-color:                              theme-color("primary");
 $link-decoration:                         none ;

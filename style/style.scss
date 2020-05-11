@@ -1,7 +1,6 @@
 .btn-link {
     padding-left: 0;
     padding-right: 0;
-    font-weight: $font-weight-bold !important;
     border: 0;
 }
 
@@ -17,6 +16,7 @@
 #creating-acc {
     display: none;
 }
+
 
 
 //#textcountright, #textcountleft {
@@ -67,4 +67,8 @@ textarea {
 
 #the-bottom-card {
     display: none;
+}
+
+.tab-active {
+    background-color: $gray-700;
 }
