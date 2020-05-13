@@ -5,19 +5,23 @@
 $(document).ready(function() {
     var maxLength = 240;
     $('#addanswertext').keyup(function () {
-        var length = $(this).val().length;
-        var length = maxLength-length;
+        var length = $("#addanswertext").val().length;
         $('#textcountleft').html(length);
-
+        $("#next-go-to-imagery-btn").prop("disabled", false);
+        if (length > 240) {
+            $("#next-go-to-imagery-btn").prop("disabled", true);
+            $(".character-counter").addClass("text-danger");
+        }
+        
     });
 });
 
 $(document).ready(function() {
     var maxLength = 240;
     $('#editimage').keyup(function () {
-        var length = $(this).val().length;
-        var length = maxLength-length;
+        var length = $("#editimage").val().length;
         $('#textcountright').html(length);
+
 
     });
 });
