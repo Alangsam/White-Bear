@@ -76,6 +76,10 @@ textarea {
     background-color: $gray-700;
 }
 
-#you-have-to-create-email, #you-need-to-enter-email, #you-have-to-create-password, #you-need-to-enter-password {
+#you-have-to-create-email,
+ #you-need-to-enter-email,
+ #you-have-to-create-password,
+ #you-need-to-enter-password,
+ #you-need-to-enter-something  {
     display: none;
 }

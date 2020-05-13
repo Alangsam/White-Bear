@@ -91,10 +91,18 @@ $(document).ready(function() {
 
     $("#the-login-btn").click(function () {
         var otherEmailLength = $("#Email_password_bottom").val().length;
-        if (otherEmailLength < 9) {
+        if (otherEmailLength < 9 && otherEmailLength > 0) {
             $("#you-need-to-enter-password").show();
             $("#Email_password_bottom").addClass("is-invalid");
         }
+        if (otherEmailLength == 0) {
+            $("#you-need-to-enter-something").show();
+            $("#Email_password_bottom").addClass("is-invalid");
+        }
+        if (otherEmailLength > 0) {
+            $("#you-need-to-enter-something").hide();
+        }
+
         if (otherEmailLength >= 9) {
             $("#you-need-to-enter-password").hide();
             $("#Email_password_bottom").removeClass("is-invalid");
