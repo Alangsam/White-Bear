@@ -11400,4 +11400,8 @@ textarea {
   background-color: #3d3e47;
 }
 
+#you-have-to-create-email, #you-need-to-enter-email {
+  display: none;
+}
+
 /*# sourceMappingURL=dist.css.map */

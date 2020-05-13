@@ -75,3 +75,7 @@ textarea {
 .tab-active {
     background-color: $gray-700;
 }
+
+#you-have-to-create-email, #you-need-to-enter-email {
+    display: none;
+}

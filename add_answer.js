@@ -40,3 +40,37 @@ $(document).ready(function() {
         $('#the-top-card').toggle();
     });
 });
+
+
+//check if the email/password creating inputs have value and if not show an error message
+
+$(document).ready(function() {
+    $("#lets-go-btn").click(function() {
+        var emailLength = $("#Email_textbox").val().length;
+        if (emailLength == 0) {
+            $("#you-have-to-create-email").show();
+            $("#Email_textbox").addClass("is-invalid");
+        }
+        if (emailLength > 0) {
+            $("#you-have-to-create-email").hide();
+            $("#Email_textbox").removeClass("is-invalid");
+        }
+        
+    
+    });
+
+    $("#the-login-btn").click(function () {
+        var otherEmailLength = $("#Email_textbox_bottom").val().length;
+        if (otherEmailLength == 0) {
+            $("#you-need-to-enter-email").show();
+            $("#Email_textbox_bottom").addClass("is-invalid");
+        }
+        if (otherEmailLength > 0) {
+            $("#you-need-to-enter-email").hide();
+            $("#Email_textbox_bottom").removeClass("is-invalid");
+        }
+
+    });
+    
+});
+
