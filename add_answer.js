@@ -56,7 +56,7 @@ $(document).ready(function() {
             $("#Email_textbox").removeClass("is-invalid");
         }
         
-    
+        //This is for the create an account email
     });
 
     $("#the-login-btn").click(function () {
@@ -70,7 +70,37 @@ $(document).ready(function() {
             $("#Email_textbox_bottom").removeClass("is-invalid");
         }
 
+        //This is for the login email
     });
-    
+
+
+    $("#lets-go-btn").click(function() {
+        var emailLength = $("#Email_password").val().length;
+        if (emailLength < 9) {
+            $("#you-have-to-create-password").show();
+            $("#Email_password").addClass("is-invalid");
+        }
+        if (emailLength >= 9) {
+            $("#you-have-to-create-password").hide();
+            $("#Email_password").removeClass("is-invalid");
+        }
+        
+        //This is for the create an account password
+    });
+
+
+    $("#the-login-btn").click(function () {
+        var otherEmailLength = $("#Email_password_bottom").val().length;
+        if (otherEmailLength < 9) {
+            $("#you-need-to-enter-password").show();
+            $("#Email_password_bottom").addClass("is-invalid");
+        }
+        if (otherEmailLength >= 9) {
+            $("#you-need-to-enter-password").hide();
+            $("#Email_password_bottom").removeClass("is-invalid");
+        }
+
+        //This is for the login password
+    });
 });
 

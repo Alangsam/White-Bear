@@ -11400,7 +11400,7 @@ textarea {
   background-color: #3d3e47;
 }
 
-#you-have-to-create-email, #you-need-to-enter-email {
+#you-have-to-create-email, #you-need-to-enter-email, #you-have-to-create-password, #you-need-to-enter-password {
   display: none;
 }
 
