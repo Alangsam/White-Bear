@@ -11359,7 +11359,6 @@ textarea {
   color: #fff;
   outline: none;
   font-size: 1.25rem;
-  width: auto;
 }
 
 .text-brand {
@@ -11405,7 +11404,8 @@ textarea {
 #you-need-to-enter-email,
 #you-have-to-create-password,
 #you-need-to-enter-password,
-#you-need-to-enter-something {
+#you-need-to-enter-something,
+#you-need-to-not-use-local {
   display: none;
 }
 

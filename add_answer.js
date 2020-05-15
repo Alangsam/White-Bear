@@ -51,6 +51,10 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#lets-go-btn").click(function() {
         var emailLength = $("#Email_textbox").val().length;
+        var enteredEmail = $("#Email_textbox").val();
+        var theAtSymbol = enteredEmail.indexOf("@");
+        var theLocalPart = enteredEmail.slice(0, theAtSymbol);
+
         if (emailLength == 0) {
             $("#you-have-to-create-email").show();
             $("#Email_textbox").addClass("is-invalid");
@@ -61,6 +65,27 @@ $(document).ready(function() {
         }
         
         //This is for the create an account email
+
+        var passLength = $("#Email_password").val().length;
+        var enteredPassword = $("#Email_password").val();
+        
+
+        if (passLength < 9) {
+            $("#you-have-to-create-password").show();
+            $("#Email_password").addClass("is-invalid");
+        }
+        if (passLength >= 9) {
+            $("#you-have-to-create-password").hide();
+            $("#Email_password").removeClass("is-invalid");
+        };
+
+        if (theLocalPart == enteredPassword) {
+            $("#you-need-to-not-use-local").show();
+            $("#Email_password").addClass("is-invalid");
+        }
+        
+
+        //This is for the create an account password
     });
 
     $("#the-login-btn").click(function () {
@@ -75,21 +100,6 @@ $(document).ready(function() {
         }
 
         //This is for the login email
-    });
-
-
-    $("#lets-go-btn").click(function() {
-        var emailLength = $("#Email_password").val().length;
-        if (emailLength < 9) {
-            $("#you-have-to-create-password").show();
-            $("#Email_password").addClass("is-invalid");
-        }
-        if (emailLength >= 9) {
-            $("#you-have-to-create-password").hide();
-            $("#Email_password").removeClass("is-invalid");
-        }
-        
-        //This is for the create an account password
     });
 
 
