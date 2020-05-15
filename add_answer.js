@@ -55,6 +55,7 @@ $(document).ready(function() {
         var theAtSymbol = enteredEmail.indexOf("@");
         var theLocalPart = enteredEmail.slice(0, theAtSymbol);
 
+        //This is for the create an account email
         if (emailLength == 0) {
             $("#you-have-to-create-email").show();
             $("#Email_textbox").addClass("is-invalid");
@@ -64,28 +65,75 @@ $(document).ready(function() {
             $("#Email_textbox").removeClass("is-invalid");
         }
         
-        //This is for the create an account email
 
         var passLength = $("#Email_password").val().length;
         var enteredPassword = $("#Email_password").val();
-        
 
+        //This is for the create an account password
         if (passLength < 9) {
             $("#you-have-to-create-password").show();
             $("#Email_password").addClass("is-invalid");
+            
         }
         if (passLength >= 9) {
             $("#you-have-to-create-password").hide();
             $("#Email_password").removeClass("is-invalid");
+
         };
 
         if (theLocalPart == enteredPassword) {
             $("#you-need-to-not-use-local").show();
             $("#Email_password").addClass("is-invalid");
+        } 
+        
+        //console.log an object
+
+        let createData =
+        {
+            _id: 678123,
+            email: "whatTheUserEnteredForTheirEmail",
+            password: "whatTheUserEnteredForTheirPassword",
+            createdOn: 200508232659
         }
+
         
 
-        //This is for the create an account password
+        
+        var theDateYo = new Date();
+        var yearCreated = theDateYo.getYear() - 100;
+        var monthCreated = theDateYo.getMonth() + 1;
+        var dayCreated = theDateYo.getDate();
+        var hourCreated = theDateYo.getHours();
+        var minutesCreated = theDateYo.getMinutes();
+        var secondsCreated = theDateYo.getSeconds();
+        var milisCreated = theDateYo.getMilliseconds();
+        var fullDateCreated = ("" + yearCreated + monthCreated + dayCreated + hourCreated + minutesCreated + secondsCreated);
+        console.log(fullDateCreated);
+
+        // create an _id value by concatenating the milliseconds
+        // of the current datetime with a random number between 000 and 999. 
+
+        
+        var randomAssNumber =  Math.floor(Math.random() * 1000);
+        randomAssNumber = ("0" + randomAssNumber).slice(-3);
+        milisCreated = ("0" + milisCreated).slice(-3);
+        var uniqueId = ("" + randomAssNumber + milisCreated);
+        console.log(uniqueId)
+          
+        
+
+
+
+
+        if (passLength >= 9 && theLocalPart != enteredPassword && emailLength > 0) {
+            
+            createData._id = uniqueId;
+            createData.email = $("#Email_textbox").val();
+            createData.password = $("#Email_password").val();
+            createData.createdOn = fullDateCreated;
+
+            console.log(createData);
+        }
     });
 
     $("#the-login-btn").click(function () {
