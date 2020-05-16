@@ -46,6 +46,7 @@ $(document).ready(function() {
 });
 
 
+
 //check if the email/password creating inputs have value and if not show an error message
 
 $(document).ready(function() {
@@ -64,8 +65,6 @@ $(document).ready(function() {
             $("#you-have-to-create-email").hide();
             $("#Email_textbox").removeClass("is-invalid");
         }
-        
-
         var passLength = $("#Email_password").val().length;
         var enteredPassword = $("#Email_password").val();
 
@@ -80,14 +79,11 @@ $(document).ready(function() {
             $("#Email_password").removeClass("is-invalid");
 
         };
-
         if (theLocalPart == enteredPassword) {
             $("#you-need-to-not-use-local").show();
             $("#Email_password").addClass("is-invalid");
         } 
-        
         //console.log an object
-
         let createData =
         {
             _id: 678123,
@@ -98,7 +94,6 @@ $(document).ready(function() {
 
         
 
-        
         var theDateYo = new Date();
         var yearCreated = theDateYo.getYear() - 100;
         var monthCreated = theDateYo.getMonth() + 1;
@@ -108,7 +103,8 @@ $(document).ready(function() {
         var secondsCreated = theDateYo.getSeconds();
         var milisCreated = theDateYo.getMilliseconds();
         var fullDateCreated = ("" + yearCreated + monthCreated + dayCreated + hourCreated + minutesCreated + secondsCreated);
-        console.log(fullDateCreated);
+        
+        
 
         // create an _id value by concatenating the milliseconds
         // of the current datetime with a random number between 000 and 999. 
@@ -118,7 +114,7 @@ $(document).ready(function() {
         randomAssNumber = ("0" + randomAssNumber).slice(-3);
         milisCreated = ("0" + milisCreated).slice(-3);
         var uniqueId = ("" + randomAssNumber + milisCreated);
-        console.log(uniqueId)
+        
           
         
 
@@ -172,5 +168,38 @@ $(document).ready(function() {
 
         //This is for the login password
     });
+
+    $("#the-save-button-create").click(function() {
+        let createCardData = 
+        
+        {
+            _id: 002045,
+            imagery: "A delicious shishkebab but the first bite of meat after the pointy end is spicy & makes an exclamation point appear over my head like in a JRPG.",
+            answer: "The syntax for making a comment in HTML is <!-- Mike's comment here -->",
+            levelNum: 1,
+            successfulAttemptsNum: 0,
+            createdOn: 200508232659,
+            lastAttemptedOn: 200508232659 // same as createdOn
+        };
+        
+        var theDateYo = new Date();
+        var yearCreated = theDateYo.getYear() - 100;
+        var monthCreated = theDateYo.getMonth() + 1;
+        var dayCreated = theDateYo.getDate();
+        var hourCreated = theDateYo.getHours();
+        var minutesCreated = theDateYo.getMinutes();
+        var secondsCreated = theDateYo.getSeconds();
+        var milisCreated = theDateYo.getMilliseconds();
+        var fullDateCreated = ("" + yearCreated + monthCreated + dayCreated + hourCreated + minutesCreated + secondsCreated);
+        var randomAssNumber =  Math.floor(Math.random() * 1000);
+        randomAssNumber = ("0" + randomAssNumber).slice(-3);
+        milisCreated = ("0" + milisCreated).slice(-3);
+        var uniqueId = ("" + randomAssNumber + milisCreated);
+        createCardData._id = uniqueId;
+        createCardData.createdOn = fullDateCreated;
+        createCardData.lastAttemptedOn = fullDateCreated;
+        console.log(createCardData)
+    });
+
 });
 
