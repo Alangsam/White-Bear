@@ -79,10 +79,14 @@ $(document).ready(function() {
             $("#Email_password").removeClass("is-invalid");
 
         };
-        if (theLocalPart == enteredPassword) {
+        if (theLocalPart === enteredPassword) {
             $("#you-need-to-not-use-local").show();
             $("#Email_password").addClass("is-invalid");
-        } 
+        } else {
+            $("#you-need-to-not-use-local").hide();
+            $("#Email_password").removeClass("is-invalid");
+        }
+
         //console.log an object
         let createData =
         {
