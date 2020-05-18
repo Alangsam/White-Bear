@@ -435,30 +435,36 @@ $(document).ready(function() {
         var enteredPassword = $("#Email_password").val();
 
         //This is for the create an account password
-        if (passLength < 9) {
+        if (passLength === 0) {
+            $("#you-have-to-enter-something-password").show();
+            $("#Email_password").addClass("is-invalid");
+        } else {
+            $("#you-have-to-enter-something-password").hide();
+            $("#Email_password").removeClass("is-invalid");
+        }
+        if (passLength !== 0 && passLength < 9) {
             $("#you-have-to-create-password").show();
             $("#Email_password").addClass("is-invalid");
             
-        }
-        if (passLength >= 9) {
+        } else {
             $("#you-have-to-create-password").hide();
             $("#Email_password").removeClass("is-invalid");
 
         };
-        if (theLocalPart === enteredPassword) {
+        if (passLength !== 0 && passLength >= 9 && theLocalPart === enteredPassword) {
             $("#you-need-to-not-use-local").show();
             $("#Email_password").addClass("is-invalid");
         } else {
             $("#you-need-to-not-use-local").hide();
             $("#Email_password").removeClass("is-invalid");
         };
-        if (brandNewList.indexOf(enteredPassword) > -1) {
+        if (passLength !== 0 && passLength >= 9 && theLocalPart !== enteredPassword && brandNewList.indexOf(enteredPassword) > -1) {
             $("#you-need-to-be-more-original").show();
             $("#Email_password").addClass("is-invalid");
         } else {
             $("#you-need-to-be-more-original").hide();
             $("#Email_password").removeClass("is-invalid");
-        }
+        };
 
         //console.log an object
         let createData =
@@ -498,7 +504,7 @@ $(document).ready(function() {
 
 
 
-        if (passLength >= 9 && theLocalPart != enteredPassword && emailLength > 0) {
+        if (passLength >= 9 && theLocalPart != enteredPassword && emailLength > 0  && brandNewList.indexOf(enteredPassword) === -1) {
             
             createData._id = uniqueId;
             createData.email = $("#Email_textbox").val();
