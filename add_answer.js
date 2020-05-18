@@ -581,6 +581,8 @@ $(document).ready(function() {
         createCardData._id = uniqueId;
         createCardData.createdOn = fullDateCreated;
         createCardData.lastAttemptedOn = fullDateCreated;
+        createCardData.imagery = `${encodeURIComponent(createCardData.imagery)}`;
+        createCardData.answer = `${encodeURIComponent(createCardData.answer)}`;
         console.log(createCardData)
     });
 
