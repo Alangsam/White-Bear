@@ -485,7 +485,15 @@ $(document).ready(function() {
             $("#you-need-to-be-more-original").hide();
             $("#Email_password").removeClass("is-invalid");
         };
-
+        function encryptThatThing (string) {
+            let newString = []
+            for (let nums = 0; nums < string.length; nums += 1) {
+                newString.push(string.charCodeAt(nums) + 1)
+            } 
+            let evenNewerThing = String.fromCharCode(...newString)
+            console.log(evenNewerThing)
+        } 
+        encryptThatThing(enteredPassword)
         //console.log an object
         let createData =
         {
