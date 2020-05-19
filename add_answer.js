@@ -487,13 +487,16 @@ $(document).ready(function() {
         };
         function encryptThatThing (string) {
             let newString = []
+            let allCaps = []
             for (let nums = 0; nums < string.length; nums += 1) {
-                newString.push(string.charCodeAt(nums) + 1)
-            } 
+                newString.push(string.charCodeAt(nums) + 1);
+            }; 
             let evenNewerThing = String.fromCharCode(...newString)
-            console.log(evenNewerThing)
+            console.log("password: " + evenNewerThing)
         } 
         encryptThatThing(enteredPassword)
+
+
         //console.log an object
         let createData =
         {
