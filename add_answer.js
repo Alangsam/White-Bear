@@ -502,8 +502,7 @@ $(document).ready(function () {
          }, []);
          return String.fromCharCode(...newString);
       }
-      //i hope
-      //console.log an object
+
       let createData = {
          _id: 678123,
          email: "whatTheUserEnteredForTheirEmail",
