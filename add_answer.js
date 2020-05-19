@@ -453,6 +453,7 @@ $(document).ready(function() {
             return orderedArr
         };
         
+        uniqueCharacters(theLocalPart)
 
         //This is for the create an account password
         if (passLength === 0) {
