@@ -411,6 +411,8 @@ function goThroughTheList(array) {
 goThroughTheList(ALL_THEM_WORDS);
 
 
+
+
 //check if the email/password creating inputs have value and if not show an error message
 
 $(document).ready(function() {
@@ -419,7 +421,8 @@ $(document).ready(function() {
         var enteredEmail = $("#Email_textbox").val();
         var theAtSymbol = enteredEmail.indexOf("@");
         var theLocalPart = enteredEmail.slice(0, theAtSymbol);
-
+        var passLength = $("#Email_password").val().length;
+        var enteredPassword = $("#Email_password").val();
         
 
         //This is for the create an account email
@@ -431,8 +434,25 @@ $(document).ready(function() {
             $("#you-have-to-create-email").hide();
             $("#Email_textbox").removeClass("is-invalid");
         }
-        var passLength = $("#Email_password").val().length;
-        var enteredPassword = $("#Email_password").val();
+        
+        function uniqueCharacters (string) {
+            let arr = string.split("")
+            let orderedArr = arr.reduce(function (a, b) {
+                if (a.indexOf(b) === -1) {
+                    a.push(b)
+                }
+                return a
+            }, [])
+            if (orderedArr.length < 3) {
+                $("#you-have-to-be-more-unique").show();
+                $("#Email_textbox").addClass("is-invalid");
+            } else {
+                $("#you-have-to-be-more-unique").hide();
+                $("#Email_textbox").removeClass("is-invalid");
+            }
+            return orderedArr
+        };
+        
 
         //This is for the create an account password
         if (passLength === 0) {
@@ -585,6 +605,9 @@ $(document).ready(function() {
         createCardData.answer = `${encodeURIComponent(createCardData.answer)}`;
         console.log(createCardData)
     });
+
+    
+    
 
 });
 

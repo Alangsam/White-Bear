@@ -11407,7 +11407,8 @@ textarea {
 #you-need-to-enter-something,
 #you-need-to-not-use-local,
 #you-need-to-be-more-original,
-#you-have-to-enter-something-password {
+#you-have-to-enter-something-password,
+#you-have-to-be-more-unique {
   display: none;
 }
 
