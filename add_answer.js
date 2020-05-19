@@ -452,7 +452,7 @@ $(document).ready(function() {
             }
             return orderedArr
         };
-        
+
         uniqueCharacters(theLocalPart)
 
         //This is for the create an account password
@@ -492,11 +492,19 @@ $(document).ready(function() {
             for (let nums = 0; nums < string.length; nums += 1) {
                 newString.push(string.charCodeAt(nums) + 1);
             }; 
+            let filteredNewString = newString.filter()
+
             let evenNewerThing = String.fromCharCode(...newString)
             console.log("password: " + evenNewerThing)
+            console.log(newString)
+
+           // a= 98 z= 123 AA = 66 ZZ = 91
+           // make so it wraps from z to a
+           // make so only letters are changed  
+           // use filter to return list with only letters whose values range between those values
         } 
         encryptThatThing(enteredPassword)
-
+        
 
         //console.log an object
         let createData =
@@ -512,11 +520,16 @@ $(document).ready(function() {
         var theDateYo = new Date();
         var yearCreated = theDateYo.getYear() - 100;
         var monthCreated = theDateYo.getMonth() + 1;
+        monthCreated = ("0" + monthCreated).slice(-2);
         var dayCreated = theDateYo.getDate();
+        dayCreated = ("0" + dayCreated).slice(-2)
         var hourCreated = theDateYo.getHours();
         var minutesCreated = theDateYo.getMinutes();
+        minutesCreated = ("0" + minutesCreated).slice(-2);
         var secondsCreated = theDateYo.getSeconds();
+        secondsCreated = ("0" + secondsCreated).slice(-2);
         var milisCreated = theDateYo.getMilliseconds();
+        milisCreated = ("0" + "0" + milisCreated).slice(-3);
         var fullDateCreated = ("" + yearCreated + monthCreated + dayCreated + hourCreated + minutesCreated + secondsCreated);
         
         
@@ -527,7 +540,6 @@ $(document).ready(function() {
         
         var randomAssNumber =  Math.floor(Math.random() * 1000);
         randomAssNumber = ("0" + randomAssNumber).slice(-3);
-        milisCreated = ("0" + milisCreated).slice(-3);
         var uniqueId = ("" + randomAssNumber + milisCreated);
         
           
@@ -600,15 +612,20 @@ $(document).ready(function() {
         var theDateYo = new Date();
         var yearCreated = theDateYo.getYear() - 100;
         var monthCreated = theDateYo.getMonth() + 1;
+        monthCreated = ("0" + monthCreated).slice(-2);
         var dayCreated = theDateYo.getDate();
+        dayCreated = ("0" + dayCreated).slice(-2)
         var hourCreated = theDateYo.getHours();
         var minutesCreated = theDateYo.getMinutes();
+        minutesCreated = ("0" + minutesCreated).slice(-2);
         var secondsCreated = theDateYo.getSeconds();
+        secondsCreated = ("0" + secondsCreated).slice(-2);
         var milisCreated = theDateYo.getMilliseconds();
+        milisCreated = ("0" + milisCreated).slice(-3);
         var fullDateCreated = ("" + yearCreated + monthCreated + dayCreated + hourCreated + minutesCreated + secondsCreated);
         var randomAssNumber =  Math.floor(Math.random() * 1000);
-        randomAssNumber = ("0" + randomAssNumber).slice(-3);
-        milisCreated = ("0" + milisCreated).slice(-3);
+        randomAssNumber = ("0" + "0" + randomAssNumber).slice(-3);
+        
         var uniqueId = ("" + randomAssNumber + milisCreated);
         createCardData._id = uniqueId;
         createCardData.createdOn = fullDateCreated;
