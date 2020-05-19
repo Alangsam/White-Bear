@@ -486,29 +486,27 @@ $(document).ready(function () {
          $("#Email_password").removeClass("is-invalid");
       }
       function encryptThatThing(string) {
-         let newString = [];
-         let allCaps = [];
-         for (let nums = 0; nums < string.length; nums += 1) {
-            newString.push(string.charCodeAt(nums) + 1);
-         }
-         let filteredNewString = newString.filter();
-
-         let evenNewerThing = String.fromCharCode(...newString);
-         console.log("password: " + evenNewerThing);
-         console.log(newString);
-
-         // a= 98 z= 123 AA = 66 ZZ = 91
-         // make so it wraps from z to a
-         // make so only letters are changed
-         // use filter to return list with only letters whose values range between those values
+         let rangOfNums = string.split("");
+         let newString = rangOfNums.map((a, b) => {
+            if (
+               (a.charCodeAt() >= 65 && a.charCodeAt() <= 89) ||
+               (a.charCodeAt() >= 97 && a.charCodeAt() <= 121)
+            ) {
+               return a.charCodeAt() + 1;
+            } else if (a.charCodeAt() === 90 || a.charCodeAt() === 122) {
+               return a.charCodeAt() - 25;
+            } else {
+               return a.charCodeAt();
+            }
+         }, []);
+         return String.fromCharCode(...newString);
       }
-      encryptThatThing(enteredPassword);
 
       //console.log an object
       let createData = {
          _id: 678123,
          email: "whatTheUserEnteredForTheirEmail",
-         password: "whatTheUserEnteredForTheirPassword",
+         password: encryptThatThing(enteredPassword),
          createdOn: 200508232659,
       };
 
@@ -549,7 +547,7 @@ $(document).ready(function () {
       ) {
          createData._id = uniqueId;
          createData.email = $("#Email_textbox").val();
-         createData.password = $("#Email_password").val();
+         createData.password = encryptThatThing(enteredPassword);
          createData.createdOn = fullDateCreated;
 
          console.log(createData);
