@@ -502,7 +502,7 @@ $(document).ready(function () {
          }, []);
          return String.fromCharCode(...newString);
       }
-      //i hope this works
+      //i hope this
       //console.log an object
       let createData = {
          _id: 678123,
