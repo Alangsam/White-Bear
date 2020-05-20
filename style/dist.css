@@ -11349,7 +11349,8 @@ h3 {
   display: none;
 }
 
-#sort, #searchbox {
+#sort,
+#searchbox {
   width: 200px;
   height: 32px;
 }
@@ -11408,7 +11409,8 @@ textarea {
 #you-need-to-not-use-local,
 #you-need-to-be-more-original,
 #you-have-to-enter-something-password,
-#you-have-to-be-more-unique {
+#you-have-to-be-more-unique,
+#you-have-to-make-yours-valid {
   display: none;
 }
 

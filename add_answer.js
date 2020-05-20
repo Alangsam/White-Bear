@@ -448,6 +448,14 @@ $(document).ready(function () {
 
       uniqueCharacters(theLocalPart);
 
+      if (/^\w+@(?<=@)\w+(?<=\w+)\.([a-z]{2})/i.test(enteredEmail) == false) {
+         $("#you-have-to-make-yours-valid").show();
+         $("#Email_textbox").addClass("is-invalid");
+      } else {
+         $("#you-have-to-make-yours-valid").hide();
+         $("#Email_textbox").removeClass("is-invalid");
+      }
+
       //This is for the create an account password
       if (passLength === 0) {
          $("#you-have-to-enter-something-password").show();

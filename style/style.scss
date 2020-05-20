@@ -1,90 +1,87 @@
 .btn-link {
-    padding-left: 0;
-    padding-right: 0;
-    border: 0;
+   padding-left: 0;
+   padding-right: 0;
+   border: 0;
 }
 //.btn {
-    //font-weight:  $font-weight-normal !important;
+//font-weight:  $font-weight-normal !important;
 //}
 
 .background-image {
-    background-image: url('/style/background-landing.jpg');
-    background-size: 100% 100%; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+   background-image: url("/style/background-landing.jpg");
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
 }
 
 //enter info to create acc on landing page is hidden initially
 #creating-acc {
-    display: none;
+   display: none;
 }
 
-
-
 //#textcountright, #textcountleft {
-    //display: none;
-//} 
+//display: none;
+//}
 
-#sort, #searchbox {
-    width: 200px;
-    height: 32px;
+#sort,
+#searchbox {
+   width: 200px;
+   height: 32px;
 }
 
 textarea {
-    resize: none;
-    color: $white;
-    outline: none;
-    font-size : $font-size-base * 1.25;
-    
+   resize: none;
+   color: $white;
+   outline: none;
+   font-size: $font-size-base * 1.25;
 }
 
 .text-brand {
-    font-family: $font-family-brand;
+   font-family: $font-family-brand;
 }
 
 .tab-seperator {
-    border-left: 1px $gray-800 solid;
+   border-left: 1px $gray-800 solid;
 }
 
 .card-body {
-    font-family: $font-family-serif;
-
+   font-family: $font-family-serif;
 }
 .card.bg-primary {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
 }
 
 .card.bg-secondary {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
 }
 .card {
-    border: 0;
+   border: 0;
 }
 
 textarea {
-    background-color: transparent;
-    border: 0;
+   background-color: transparent;
+   border: 0;
 }
 
 #the-top-card {
-    display: none;
+   display: none;
 }
 
 .tab-active {
-    background-color: $gray-700;
+   background-color: $gray-700;
 }
 
 #you-have-to-create-email,
- #you-need-to-enter-email,
- #you-have-to-create-password,
- #you-need-to-enter-password,
- #you-need-to-enter-something, 
- #you-need-to-not-use-local, 
- #you-need-to-be-more-original, 
- #you-have-to-enter-something-password,
- #you-have-to-be-more-unique  {
-    display: none;
+#you-need-to-enter-email,
+#you-have-to-create-password,
+#you-need-to-enter-password,
+#you-need-to-enter-something,
+#you-need-to-not-use-local,
+#you-need-to-be-more-original,
+#you-have-to-enter-something-password,
+#you-have-to-be-more-unique,
+#you-have-to-make-yours-valid {
+   display: none;
 }
