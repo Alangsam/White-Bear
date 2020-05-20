@@ -635,4 +635,16 @@ $(document).ready(function () {
       createCardData.answer = `${encodeURIComponent(createCardData.answer)}`;
       console.log(createCardData);
    });
+
+   $("#use-this-btn-to-search").click(function () {
+      let whatTheySearchin = $("#search-this-box").val();
+
+      let whatsAllowed = /([^a-zA-Z]+)/g;
+      let replaceWhatsAllowed = whatTheySearchin.replace(whatsAllowed, " ");
+      let lessAllowed = /(\s+)/g;
+      let makeTheSpacesOne = replaceWhatsAllowed.replace(lessAllowed, " ");
+      let noWhiteOnEnd = makeTheSpacesOne.trim();
+      let finalProduct = noWhiteOnEnd.toLowerCase();
+      console.log(finalProduct);
+   });
 });
