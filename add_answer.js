@@ -551,7 +551,8 @@ $(document).ready(function () {
          passLength >= 9 &&
          theLocalPart != enteredPassword &&
          emailLength > 0 &&
-         brandNewList.indexOf(enteredPassword) === -1
+         brandNewList.indexOf(enteredPassword) === -1 &&
+         /^\w+@(?<=@)\w+(?<=\w+)\.([a-z]{2})/i.test(enteredEmail) == true
       ) {
          createData._id = uniqueId;
          createData.email = $("#Email_textbox").val();
