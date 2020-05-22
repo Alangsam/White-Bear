@@ -448,7 +448,7 @@ $(document).ready(function () {
 
       uniqueCharacters(theLocalPart);
 
-      if (/^\w+@(?<=@)\w+(?<=\w+)\.([a-z]{2})/i.test(enteredEmail) == false) {
+      if (/^\w+@\w+\.([a-z]{2,})/i.test(enteredEmail) == false) {
          $("#you-have-to-make-yours-valid").show();
          $("#Email_textbox").addClass("is-invalid");
       } else {
